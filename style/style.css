@@ -1,0 +1,116 @@
+@import url('https://fonts.cdnfonts.com/css/estilo-pro-bold');
+@font-face {
+    font-family: STOKED;
+    src: url(http://sitename.com/wp-content/themes/themename/fonts/komoda.ttf);
+    font-weight: normal;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-color: var(--background-color);
+    font-family: STOKED, serif !important;
+}
+
+.picture {
+    width: auto;
+    max-width: 1920px;
+    float: none;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: -75px;
+    padding-left: 0;
+    padding-right: 0;
+    height: 550px;
+    position: relative;
+}
+
+.picture::after {
+    background-image: url(../assests/picture_overlay.png);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    content: '';
+    bottom: 0;
+    display: block;
+    height: 226px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    width: 100%;
+    z-index: 1;
+}
+.main-img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    filter: brightness(70%)
+}
+.home-subheading {
+    color: var(--text-color-main);
+}
+.content-text .home-heading {
+    margin-top: 20px;
+}
+/*.content-text {
+    padding-inline: 5%;
+    width: auto;
+    max-width: 840px;
+    float: none;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0 20px 110px;
+    position: relative;
+    text-align: center;
+    z-index: 3;
+}
+
+.content-text h1 {
+    text-align: center;
+    font-size: 48px;
+    color: var(--main-color);
+    font-weight: 200;
+    line-height: 1.05;
+    margin: 0 0 45px;
+}
+.content-text h2 {
+    line-height: normal;
+}
+.content-text p, h2, ul, li {
+    color: var(--text-color-main);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.75;
+}*/
+/*.content-list {
+    text-align: left;
+    display: flex;
+    justify-content: center;
+}
+.content-list p {
+    margin: 0;
+}
+.content-list .content-list-title {
+    text-align: center;
+    border-bottom: 1px solid var(--main-color);
+}
+.content-list p:not(.content-list-title)::before {
+    content: ">";
+    padding-right: 5px;
+    color: var(--main-color);
+}
+.content-list-link {
+    color: var(--text-color-main);
+    text-decoration-color: var(--main-color);
+}*/

@@ -1,0 +1,212 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-color: var(--background-color);
+}
+
+
+.content-title {
+    text-align: center;
+    font-size: 48px;
+    font-weight: 200;
+    line-height: 1.05;
+    margin: 0 0 45px;
+}
+
+.content-text {
+    padding-inline: 5%;
+    width: auto;
+    max-width: 840px;
+    float: none;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0 20px 110px;
+    text-align: center;
+    border: 1px solid red;
+}
+.content-heading {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 200;
+    line-height: 1.05;
+    margin: 0 0 45px;
+}
+
+.content-subheading {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 200;
+    line-height: 1.05;
+    margin: 0 0 16px;
+}
+
+.content-text h1 {
+    text-align: center;
+    font-size: 48px;
+    font-weight: 200;
+    line-height: 1.05;
+    margin: 0 0 45px;
+}
+.content-text h2 {
+    line-height: normal;
+}
+.content-text p, li {
+    color: var(--text-color-main);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.55;
+}
+
+
+.content-list {
+    text-align: left;
+    display: flex;
+    justify-content: center;
+}
+.content-list ul > li {
+    list-style: none;
+    position: relative;
+    color: inherit;
+}
+.content-list ul > li > span, a {
+    color: var(--text-color-main);
+}
+
+.content-list .content-list-title {
+    text-align: center;
+    border-bottom: 1px solid var(--main-color);
+}
+.content-list li:not(.content-list-title)::before {
+    content: ">";
+    position: absolute;
+    left: -17px;
+    color: inherit;
+}
+
+.content-list-link {
+    color: var(--text-color-main);
+    text-decoration-color: var(--main-color);
+}
+
+.content-table {
+    box-sizing: border-box;
+    display: grid;
+    grid-gap: 1px;
+    border: 1px solid var(--text-color-main);
+    border-radius: 7px;
+    background-color: var(--text-color-main);
+    overflow: hidden;
+}
+#garbage-chore {
+    grid-template-columns: repeat(5, 1fr);
+}
+.content-table-item {
+    display: inline-grid;
+    background-color: var(--background-color);
+}
+.content-table-item:not(.main-color) {
+    color: var(--text-color-main);
+}
+
+.content-table-item:not(.content-table-heading) {
+    /*border: 1px solid var(--text-color-main);*/
+}
+.content-table .table-size-2 {
+    grid-column: span 2;
+}
+.table-selected {
+    color: var(--secondary-color) !important;
+    border-color: var(--secondary-color) !important;
+}
+
+#drinks-prices {
+    grid-template-columns: repeat(2, 1fr);
+}
+.collapsable-toggle {
+    display: none;
+}
+.collapsable-toggle-label {
+    display: block;
+    font-family: monospace;
+    font-size: 1.2rem;
+    text-align: center;
+
+
+    color: var(--text-color-main);
+    border: 1px solid var(--text-color-main);
+    cursor: pointer;
+
+    border-radius: 7px;
+    transition: all 0.25s ease-out;
+}
+.collapsable-toggle-label::before {
+    content: ' ';
+    display: inline-block;
+
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid currentColor;
+
+    vertical-align: middle;
+    margin-right: .7rem;
+    transform: translateY(-2px);
+
+    transition: transform .2s ease-out;
+}
+.collapsable-toggle-label::after {
+    content: ' ';
+    display: inline-block;
+
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid currentColor;
+
+    vertical-align: middle;
+    margin-left: .7rem;
+    transform: translateY(-2px);
+
+    transition: transform .2s ease-out;
+}
+.collapsible-item {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .25s ease-in-out;
+    box-sizing: border-box;
+}
+.collapsable-toggle:not(:checked) + .collapsable-toggle-label + .collapsible-item {
+    border-style: none;
+}
+.collapsable-toggle:checked + .collapsable-toggle-label + .collapsible-item {
+    max-height: 100vh;
+}
+.collapsable-toggle:checked + .collapsable-toggle-label::before {
+    transform: rotate(90deg) translateX(-3px);
+}
+.collapsable-toggle:checked + .collapsable-toggle-label::after {
+    transform: rotate(90deg) translateX(-3px);
+}
+.collapsable-toggle:checked + .collapsable-toggle-label {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.collapsable-toggle:checked + .collapsable-toggle-label[data-align-border] {
+    border-bottom-style: none;
+}
+.collapsable-toggle:checked + .collapsable-toggle-label + .collapsible-item[data-align-border] {
+    border-top-right-radius: 0 !important;
+    border-top-left-radius: 0 !important;
+}
+
+
+
+
+
+
+
+

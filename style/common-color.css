@@ -1,0 +1,33 @@
+:root {
+    --main-color: #69e1bb;
+    --background-color: white;
+    --text-color-con: white;
+    --text-color-main: #798693;
+    --secondary-color: #ff6680;
+}
+
+.main-color {
+    color: var(--main-color) !important;
+}
+.main-color-wrapper:nth-child(odd) .main-color {
+    color: var(--secondary-color) !important;
+}
+.main-color-border {
+    border-color: var(--main-color) !important;
+}
+.main-color-wrapper:nth-child(odd) .main-color-border {
+    border-color: var(--secondary-color) !important;
+}
+.main-color-link {
+    text-decoration-color: var(--main-color);
+}
+.main-color-wrapper:nth-child(odd) .main-color-link {
+    text-decoration-color: var(--secondary-color) !important;
+}
+.main-color-hover:hover {
+    color: var(--main-color) !important;
+}
+.main-color-wrapper:nth-child(odd) .main-color-hover:hover {
+    color: var(--secondary-color) !important;
+}
+
