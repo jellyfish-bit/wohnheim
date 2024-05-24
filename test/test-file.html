@@ -2,90 +2,74 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Title</title>
     <style>
-        .collapsable-toggle {
-            display: none;
-        }
-        .collapsable-toggle-label {
-            display: block;
-
-            font-weight: bold;
-            font-family: monospace;
-            font-size: 1.2rem;
-            text-transform: uppercase;
-            text-align: center;
-
-            padding: 1rem;
-
-            color: #A77B0E;
-            background: #FAE042;
-
-            cursor: pointer;
-
-            border-radius: 7px;
-            transition: all 0.25s ease-out;
+        body {
+            margin: 0;
         }
 
-        .collapsable-toggle-label:hover {
-            color: #7C5A0B;
-        }
-        .collapsable-toggle-label::before {
-            content: ' ';
-            display: inline-block;
-
-            border-top: 5px solid transparent;
-            border-bottom: 5px solid transparent;
-            border-left: 5px solid currentColor;
-
-            vertical-align: middle;
-            margin-right: .7rem;
-            transform: translateY(-2px);
-
-            transition: transform .2s ease-out;
-        }
-        .collapsible-item .collapsable-inner {
-            background: rgba(250, 224, 66, .2);
-            border-bottom: 1px solid rgba(250, 224, 66, .45);
-
-            border-bottom-left-radius: 7px;
-            border-bottom-right-radius: 7px;
-            padding: .5rem 1rem;
-        }
-        .collapsible-item {
-            max-height: 0px;
-            overflow: hidden;
-
-            transition: max-height .25s ease-in-out;
-        }
-        .collapsable-toggle:checked + .collapsable-toggle-label + .collapsible-item {
-            max-height: 100vh;
-        }
-        .collapsable-toggle:checked + .collapsable-toggle-label::before {
-            transform: rotate(90deg) translateX(-3px);
+        .wrapper {
+            height: 100vh;
+            overflow-y: auto;
+            overflow-x: hidden;
+            perspective: 10px;
         }
 
-        .collapsable-toggle:checked + .collapsable-toggle-label {
-            border-bottom-right-radius: 0;
-            border-bottom-left-radius: 0;
+        header {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            transform-style: preserve-3d;
+            z-index: -1;
         }
 
+        .background {
+            transform: translateZ(-10px) scale(2);
+        }
+
+        .foreground {
+            transform: translateZ(-5px) scale(1.5);
+        }
+
+        .background,
+        .foreground {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        .title {
+            font-size: 7rem;
+            color: white;
+            text-shadow: 0 0 5px black;;
+        }
+
+        section {
+            font-size: 2rem;
+            padding: 2rem;
+            background-color: #333;
+            color: white;
+        }
     </style>
 </head>
 <body>
-<div class="collapsable">
-    <input id="drink-prices-toggle" class="collapsable-toggle" type="checkbox">
-    <label for="drink-prices-toggle" class="collapsable-toggle-label">More Info</label>
-    <div class="collapsible-item">
-        <div class="collapsable-inner">
-            <p>
-                QUnit is by calling one of the object that are embedded in JavaScript, and faster JavaScript program could also used with
-                its elegant, well documented, and functional programming using JS, HTML pages Modernizr is a popular browsers without
-                plug-ins. Test-Driven Development.
-            </p>
-        </div>
-    </div>
+<div class="wrapper">
+    <header>
+        <img src="../assets/front.jpg" class="background">
+        <img src="../assets/map-karlsruhe.jpeg" class="foreground">
+        <h1 class="title">Welcome!</h1>
+    </header>
+    <section>
+        <p>Line</p>
+        <h1>Heading</h1>
+        <div>Hello</div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse facilis unde illo neque at hic quisquam, nulla consectetur, itaque maxime sit iusto aliquam culpa reiciendis eaque recusandae vitae modi, animi expedita perferendis inventore. Culpa incidunt odit dicta quibusdam ullam facilis eum magnam, consectetur voluptates praesentium, pariatur eos nihil! Natus in, autem aut facere repellat eveniet commodi illo ullam hic fugit deserunt explicabo esse atque reprehenderit optio, dicta suscipit sed! Porro fugiat numquam vel magni, iure provident consequuntur velit ut quia itaque repudiandae molestiae, nobis sequi incidunt autem! Cum impedit accusamus laboriosam eaque necessitatibus consectetur incidunt a exercitationem molestias doloribus tenetur amet, ullam at repudiandae, quos reprehenderit adipisci assumenda dolor enim voluptas natus! Assumenda praesentium voluptate culpa quidem quasi impedit unde incidunt odit velit, dolore officiis distinctio, fugit, optio sed. Quos nesciunt eius reprehenderit ipsa consectetur tempora, fugiat provident corporis perspiciatis veritatis totam temporibus voluptates soluta vitae mollitia molestias reiciendis expedita doloribus est. Maxime et fugit expedita id sed cumque harum dignissimos aperiam voluptatum quos obcaecati illo tempore consectetur, sunt perferendis eius aliquid soluta praesentium voluptatem assumenda ex fuga. Iusto, possimus? Dolores deleniti eaque, aperiam consequuntur odit culpa, architecto, quas veniam provident inventore eius. Laboriosam in reprehenderit quidem? Officiis illum molestiae, praesentium velit, illo debitis quasi fuga laborum veritatis necessitatibus fugiat cupiditate! Quia animi provident maxime numquam porro itaque! Provident, rerum. Aliquid cum quo ducimus ad? Repellat nihil, saepe beatae rerum sint eveniet voluptate officiis velit autem officia tempore deserunt sequi quod quae culpa sed. Reprehenderit eveniet ipsum nihil ipsam quam facilis, possimus modi placeat ratione soluta voluptate obcaecati error minima enim, fugiat quaerat architecto, iure dignissimos a eum quidem eos at fuga. Consectetur, quisquam at reprehenderit in exercitationem inventore incidunt dolorum quos adipisci labore? Fugiat facilis ipsum minus, officiis eos modi sequi distinctio pariatur reprehenderit accusantium labore obcaecati, recusandae saepe?
+    </section>
 </div>
-
 </body>
 </html>

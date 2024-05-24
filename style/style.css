@@ -13,8 +13,11 @@ body {
     margin: 0;
     overflow-y: scroll;
     overflow-x: hidden;
-    background-color: var(--background-color);
+    background-color: aqua;
     font-family: STOKED, serif !important;
+}
+section {
+    background-color: transparent;
 }
 
 .picture {
@@ -32,7 +35,7 @@ body {
 }
 
 .picture::after {
-    background-image: url(../assests/picture_overlay.png);
+    background-image: url(../assets/picture_overlay.png);
     background-position: center bottom;
     background-repeat: no-repeat;
     background-size: 100% auto;
@@ -62,55 +65,47 @@ body {
 .content-text .home-heading {
     margin-top: 20px;
 }
-/*.content-text {
-    padding-inline: 5%;
-    width: auto;
-    max-width: 840px;
-    float: none;
-    display: block;
-    margin-right: auto;
-    margin-left: auto;
-    padding: 0 20px 110px;
-    position: relative;
-    text-align: center;
-    z-index: 3;
-}
+.parallax-wrapper {
+    /*height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    perspective: 10px;*/
+    background-image: url("/assets/map-karlsruhe.jpeg");
 
-.content-text h1 {
-    text-align: center;
-    font-size: 48px;
-    color: var(--main-color);
-    font-weight: 200;
-    line-height: 1.05;
-    margin: 0 0 45px;
+    /* Set a specific height */
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-.content-text h2 {
-    line-height: normal;
+.navbar {
 }
-.content-text p, h2, ul, li {
-    color: var(--text-color-main);
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 1.75;
-}*/
-/*.content-list {
-    text-align: left;
+.parallax-wrapper .content-text {
+    margin-top: 0   ;
+}
+.parallax-header {
+    position: relative;
     display: flex;
     justify-content: center;
+    align-items: center;
+    height: 100%;
+    transform-style: preserve-3d;
+    z-index: -1;
 }
-.content-list p {
-    margin: 0;
+.parallax-header .content-text {
+    margin-top: 0px;
 }
-.content-list .content-list-title {
-    text-align: center;
-    border-bottom: 1px solid var(--main-color);
+.parallax-header section {
+    background-color: var(--background-color);
+    z-index: 0;
 }
-.content-list p:not(.content-list-title)::before {
-    content: ">";
-    padding-right: 5px;
-    color: var(--main-color);
+.parallax-foreground {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+    transform: translateZ(-10px) scale(2);
 }
-.content-list-link {
-    color: var(--text-color-main);
-    text-decoration-color: var(--main-color);
-}*/
