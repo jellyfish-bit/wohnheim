@@ -8,14 +8,33 @@
     <link rel="stylesheet" href="./style/common-color.css">
     <link rel="stylesheet" href="style/content-style.css">
     <link rel="stylesheet" href="style/navbar-style.css">
+    <script src="script/navbar.js" defer></script>
 </head>
 <body>
-
+<!--Todo links-->
+<!--<nav class="navbar" id="navbar">
+    <ul class="nav-list" id="nav-list">
+        <li><a href="" class="nav-link">Über uns</a></li>
+        <li><a href="#" class="nav-link">Stockwerke</a></li>
+        <li><a href="./info/info.html" class="nav-link">Info/Guides</a></li>
+    </ul>
+</nav>-->
+<header class="header" id="header">
+        <input id="menu-toggle" type="checkbox"/>
+        <label class='menu-button-container' for="menu-toggle">
+            <div class='menu-button'></div>
+        </label>
+        <ul class="menu-list" id="menu-list">
+            <li><a href="#" class="nav-link" onclick="toggleLinkScroll()">Über uns</a></li>
+            <li><a href="#" class="nav-link" onclick="toggleLinkScroll()">Stockwerke</a></li>
+            <li><a href="#" class="nav-link" onclick="toggleLinkScroll()">Info</a></li>
+        </ul>
+</header>
 
 <div class="picture picture-hasOverlay">
     <img alt="front" class="main-img" src="assets/front.jpg"/>
 </div>
-
+<div class="main-color-wrapper"></div>
 <div class="content-text main-color-wrapper">
     <h1 class="content-title main-color home-heading">Wohnheim Campus Ost</h1>
     <h2 class="content-subheading main-color">
@@ -31,7 +50,7 @@
     </p>
 
 </div>
-<div class="navbar-scroll-indicator">
+<!--<div class="navbar-scroll-indicator">
     <a href="#navbar">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
              stroke="currentColor"
@@ -40,37 +59,43 @@
                   d="m4.5 5.25 7.5 7.5 7.5-7.5m-15 6 7.5 7.5 7.5-7.5"></path>
         </svg>
     </a>
-</div>
-<!--Todo links-->
-<nav class="navbar" id="navbar">
-    <ul class="nav-list" id="nav-list">
-        <li><a href="" class="nav-link">Über uns</a></li>
-        <li><a href="#" class="nav-link">Stockwerke</a></li>
-        <li><a href="./info/info.html" class="nav-link">Info/Guides</a></li>
-    </ul>
-</nav>
+</div>-->
+
 
 <section class="parallax-wrapper">
     <div class="main-color-wrapper"></div>
-    <div class="content-text main-color-wrapper">
-        <h1 class="content-title main-color" id="info">Allgeimene Infos</h1>
-        <div class="content-list">
-            <ul class="main-color">
-                <!--Todo better links alle selbe seite eh-->
-                <li class="content-list-title main-color-border"></li>
-                <li><a class="main-color-link" href="info/info.html">Newcomer Guide</a></li>
-                <li><a class="main-color-link" href="info/info.html#whatsapp-group">WhatsApp Gruppe</a></li>
-                <li><a class="main-color-link" href="info/info.html#garbage">Wohin mit Müll?</a></li>
-                <li><a class="main-color-link" href="info/info.html#washing">Waschmaschinen</a></li>
-                <li><a class="main-color-link" href="info/info.html#drinks">Getränke Kühlschrank</a></li>
-                <li><a class="main-color-link" href="info/info.html#rundfunkbeitrag">Rundfunkbeitrag</a></li>
-            </ul>
-        </div>
+    <div class="content-split">
+        <div class="content-split-item content-text main-color-wrapper">
+            <h1 class="content-title main-color">Allgeimene Infos</h1>
+            <div class="content-list">
+                <ul class="main-color">
+                    <!--Todo better links alle selbe seite eh-->
+                    <li class="content-list-title main-color-border"></li>
+                    <li><a class="main-color-link" href="info/info.html">Newcomer Guide</a></li>
+                    <li><a class="main-color-link" href="info/info.html#whatsapp-group">WhatsApp Gruppe</a></li>
+                    <li><a class="main-color-link" href="info/info.html#garbage">Wohin mit Müll?</a></li>
+                    <li><a class="main-color-link" href="info/info.html#washing">Waschmaschinen</a></li>
+                    <li><a class="main-color-link" href="info/info.html#drinks">Getränke Kühlschrank</a></li>
+                    <li><a class="main-color-link" href="info/info.html#rundfunkbeitrag">Rundfunkbeitrag</a></li>
+                </ul>
+            </div>
 
+        </div>
+        <img class="content-split-item" src="assets/logo-swka.svg" alt="logo">
     </div>
-    <div class="content-text main-color-wrapper">
-        <h1 class="content-title main-color" id="location">Anfahrt</h1>
+    <div class="content-split">
+        <img class="content-split-item" src="assets/map-karlsruhe.jpeg" alt="map">
+        <div class="content-text content-split-item main-color-wrapper">
+            <h1 class="content-title main-color" id="location">Anfahrt</h1>
+            <!--Todo-->
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Animi asperiores aspernatur deserunt ducimus esse illum in labore,
+            laboriosam laborum maiores nulla obcaecati possimus quam repudiandae
+            similique suscipit tenetur totam voluptas!
+        </div>
     </div>
+
+
     <div class="content-text main-color-wrapper">
         <h1 class="content-title main-color" id="important">Wichtige Termine</h1>
     </div>
@@ -92,8 +117,11 @@
         </div>
     </div>
     <div class="content-text" style="border: 1px solid red; margin-top: 1000px">
-        Last
+
     </div>
+    <script>
+
+    </script>
 
 </section>
 </body>

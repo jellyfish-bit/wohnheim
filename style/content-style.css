@@ -7,6 +7,8 @@ body {
     overflow-y: scroll;
     overflow-x: hidden;
     background-color: var(--background-color);
+    font-family: var(--font-pop), serif !important;
+
 }
 
 
@@ -203,6 +205,33 @@ body {
 .collapsable-toggle:checked + .collapsable-toggle-label + .collapsible-item[data-align-border] {
     border-top-right-radius: 0 !important;
     border-top-left-radius: 0 !important;
+}
+
+.content-split {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1000px;
+    margin-top: 100px;
+    margin-inline: auto;
+    margin-bottom: 100px;
+    gap: 10%;
+    padding-inline: 20px;
+    flex-wrap: wrap;
+
+}
+.content-split .content-split-item {
+    margin: 0;
+    align-self: center;
+}
+.content-split > div {
+    max-width: 50%;
+}
+.content-split img {
+    box-shadow: 0 0 20px rgba(0,0,0,3);
+    background-color: black;
+    max-width: 30%
 }
 
 

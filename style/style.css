@@ -14,7 +14,6 @@ body {
     overflow-y: scroll;
     overflow-x: hidden;
     background-color: aqua;
-    font-family: STOKED, serif !important;
 }
 section {
     background-color: transparent;
@@ -32,6 +31,7 @@ section {
     padding-right: 0;
     height: 550px;
     position: relative;
+    z-index: 9;
 }
 
 .picture::after {
@@ -62,6 +62,8 @@ section {
 .home-subheading {
     color: var(--text-color-main);
 }
+.content-text {
+}
 .content-text .home-heading {
     margin-top: 20px;
 }
@@ -70,7 +72,7 @@ section {
     overflow-y: auto;
     overflow-x: hidden;
     perspective: 10px;*/
-    background-image: url("/assets/map-karlsruhe.jpeg");
+    /*background-image: url("/assets/map-karlsruhe.jpeg");
 
     /* Set a specific height */
 
@@ -80,10 +82,8 @@ section {
     background-repeat: no-repeat;
     background-size: cover;
 }
-.navbar {
-}
 .parallax-wrapper .content-text {
-    margin-top: 0   ;
+    margin-top: 50px;
 }
 .parallax-header {
     position: relative;
@@ -94,9 +94,7 @@ section {
     transform-style: preserve-3d;
     z-index: -1;
 }
-.parallax-header .content-text {
-    margin-top: 0px;
-}
+
 .parallax-header section {
     background-color: var(--background-color);
     z-index: 0;
