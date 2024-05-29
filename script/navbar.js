@@ -10,6 +10,8 @@ const observer = new IntersectionObserver(entries => {
   });
 });
 const elementHeader = document.getElementById("header");
+const elementMenuButton = document.getElementById("menu-toggle");
+
 
 let prevScrollpos = window.scrollY;
 let prevScrollposSmooth = window.scrollY + 50;
@@ -61,14 +63,14 @@ function shouldHideNavMenu(pTarget) {
     return;
   }
   if (!pTarget.matches('#menu-toggle') && !pTarget.matches('.menu-button') &&
-    !pTarget.matches('.nav-link') && !pTarget.matches('.nav-resume')
+    !pTarget.matches('.nav-link')
     && !pTarget.matches('.menu-button-container')) {
     closeDropDownMenu(false);
   }
 }
 function mousemoveHeader(pEvent) {
   if (document.getElementById("menu-toggle").checked) {
-    if (window.matchMedia("(max-width: 700px)")) {
+    if (window.matchMedia("(max-width: 55rem)")) {
       return;
     }
   }
@@ -80,20 +82,7 @@ function mousemoveHeader(pEvent) {
     }
   }
 }
-function workSelectedButton(pNumber) {
-  for (const li of document.querySelectorAll('#ex-list>li')) {
-    li.classList.remove('ex-item-active');
-  }
-  document.getElementById("ex-list-" + pNumber).classList.add('ex-item-active');
 
-  showWorkText(pNumber);
-}
-function showWorkText(pNumber) {
-  for (let i = 1; i <= 4; i++) {
-    document.getElementById("ex-work-item-" + i).style.display = "none";
-  }
-  document.getElementById("ex-work-item-" + pNumber).style.display = "block";
-}
 function closeDropDownMenu(pForce) {
   if (linkScroll && !pForce) {
     return;

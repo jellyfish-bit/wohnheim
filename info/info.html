@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <title>Infos</title>
@@ -7,18 +7,24 @@
     <link rel="stylesheet" href="../style/content-style.css">
     <link rel="stylesheet" href="../style/common-color.css">
 
+    <link rel="stylesheet" href="../style/navbar-style.css">
+    <script src="../script/navbar.js" defer></script>
 </head>
 <body>
 <!--TODO style-->
-<nav class="navbar">
-    <ul class="nav-list" id="nav-list">
-        <li><a href="#" class="nav-link">Home</a></li>
-        <li><a href="#" class="nav-link">1. Stock</a></li>
-        <li><a href="./floors/floor2/info-floor-2.html" class="nav-link">2. Stock</a></li>
-        <li><a href="#" class="nav-link">3. Stock</a></li>
-
+<header class="header" id="header">
+    <input id="menu-toggle" type="checkbox"/>
+    <label class='menu-button-container' for="menu-toggle">
+        <div class='menu-button'></div>
+    </label>
+    <ul class="menu-list" id="menu-list">
+        <li><a href="../index.html" class="nav-link">Home</a></li>
+        <li><a href="#" class="nav-link" onclick="toggleLinkScroll()">1.Stock</a></li>
+        <li><a href="./floors/floor2/info-floor-2.html" class="nav-link">2.Stock</a></li>
+        <li><a href="#" class="nav-link" onclick="toggleLinkScroll()">3.Stock</a></li>
     </ul>
-</nav>
+</header>
+
 <h1 class="content-title main-color">Allgeimene Informatione</h1>
 
 <div class="content-text main-color-wrapper">

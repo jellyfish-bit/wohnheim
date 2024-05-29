@@ -6,9 +6,24 @@
     <link rel="stylesheet" href="../../../style/common-color.css">
     <link rel="stylesheet" href="../../../style/content-style.css">
     <script src="floor-work-table.js" defer></script>
+
+    <link rel="stylesheet" href="../../../style/navbar-style.css">
+    <script src="../../../script/navbar.js" defer></script>
 </head>
 <body>
 <!--Todo style und co-->
+<header class="header" id="header">
+    <input id="menu-toggle" type="checkbox"/>
+    <label class='menu-button-container' for="menu-toggle">
+        <div class='menu-button'></div>
+    </label>
+    <ul class="menu-list" id="menu-list">
+        <li><a href="../../../index.html" class="nav-link">Home</a></li>
+        <li><a href="../../info.html" class="nav-link">Info</a></li>
+        <li><a href="#garbage-chore" class="nav-link" onclick="toggleLinkScroll()">Mülldienst</a></li>
+        <li><a href="#" class="nav-link" onclick="toggleLinkScroll()">Getränke</a></li>
+    </ul>
+</header>
 <div>
     <h1 class="content-title main-color">Flur 200</h1>
 

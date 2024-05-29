@@ -1,7 +1,8 @@
 :root {
-    --top-nav-size: 100px;
+    --top-nav-size: 80px;
     --blue: blue;
     --navy-gray: #495670;
+    --nav-back-trans: rgba(121, 134, 147, 0.7);
 
 }
 
@@ -86,10 +87,6 @@
     /*height: var(--top-nav-size);*/
     z-index: 10;
     overflow: visible;
-
-}
-.header-wrapper {
-    border: 1px solid red;
 }
 /*@media (min-width: 1200px) {
     .header {
@@ -142,7 +139,7 @@
     /*padding: 0;*/
     z-index: 10;
     box-shadow: 0 10px 30px -15px var(--navy-gray);
-    background-color: rgba(121, 134, 147, 0.7);
+    background-color: var(--nav-back-trans);
     border-radius: 7px;
     padding: 20px;
     backdrop-filter: blur(2px);
@@ -166,6 +163,10 @@
     justify-content: center;
     align-items: center;
     z-index: 10;
+    background-color: var(--nav-back-trans);
+
+    backdrop-filter: blur(2px);
+
 }
 
 #menu-toggle {
@@ -176,12 +177,18 @@
 .menu-button::before,
 .menu-button::after {
     display: block;
-    background-color: var(--main-color);
+    background-color: var(--white);
     position: absolute;
     height: 4px;
     width: 30px;
     transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
     border-radius: 2px;
+}
+.menu-button-container:hover .menu-button,
+.menu-button-container:hover .menu-button::before,
+.menu-button-container:hover .menu-button::after {
+    background-color: var(--main-color);
+
 }
 
 .menu-button::before {
@@ -208,9 +215,18 @@
     transform: rotate(-405deg);
 }
 
-/*@media (max-width: 700px) {
+@media (max-width: 55rem) {
+    .header {
+        justify-content: flex-end;
+        height: var(--top-nav-size) ;
+        padding: 0;
+    }
     .menu-button-container {
         display: flex;
+        height: var(--top-nav-size);
+        width: calc(9rem + 40px);
+        border-radius: 0 0 0 10px;
+
     }
 
     .menu-list {
@@ -220,12 +236,17 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background-color: var(--blue);
         border-radius: 0 0 8px 8px;
         margin-top: calc(var(--top-nav-size) - 1px);
-        width: 30%;
-        min-width: 120px;
+        width: 9rem;
+        padding-top: 0;
+        padding-bottom: 0;
         z-index: 10;
+    }
+    #menu-toggle:checked~.menu-button-container {
+        border-radius: 0;
+        transition: border 400ms cubic-bezier(0.23, 1, 0.32, 1);
+
     }
 
     #menu-toggle~.menu-list li {
@@ -237,7 +258,7 @@
     }
 
     #menu-toggle:checked~.menu-list li {
-        height: 3.5em;
+        height: 3em;
         padding-inline: 0.8em;
         transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
     }
@@ -246,26 +267,21 @@
         box-sizing: border-box;
         align-items: center;
         width: 100%;
+        justify-content: flex-end;
+
         margin: 0;
     }
-
-    .menu-list>li:not(:last-child) {
-        justify-content: flex-end;
-    }
-
-    .menu-list>li:last-child {
-        justify-content: center;
-    }
-}*/
+}
 
 .nav-link {
     display: inline;
     font-size: 1.3rem;
-    color: white;
+    color: var(--white);
     text-decoration: none;
     font-weight: 400;
     transition: 0.3s;
     box-sizing: border-box;
+    word-spacing: normal;
 
 }
 
